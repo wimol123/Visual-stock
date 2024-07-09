@@ -1,0 +1,14 @@
+dir = /appstore/mob/audit_supplier_cpram/log
+file = auditcpram.log
+target=${dir}/${file}
+log4j.debug = false
+# Set root logger level to INFO and add an appender called QSSI.
+log4j.rootLogger=INFO, file
+# R is set to be a ConsoleAppender.
+log4j.appender.file=org.apache.log4j.DailyRollingFileAppender
+log4j.appender.file.DatePattern = '.'yyyy_MM_dd
+log4j.appender.file.File=${target}
+# QSSI uses PatternLayout.
+log4j.appender.file.layout=org.apache.log4j.PatternLayout
+#log4j.appender.file.layout.ConversionPattern=%d{HH:mm:ss}| %M | %L | %tid | %-4r %-5p %c %x - %m%n
+log4j.appender.file.layout.ConversionPattern=%d{MM-dd-yyyy HH:mm:ss.SSS}|%X{PID}|%tid|%-5p|%c:%L|Message:%m%n

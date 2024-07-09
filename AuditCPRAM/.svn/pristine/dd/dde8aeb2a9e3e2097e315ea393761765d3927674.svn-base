@@ -1,0 +1,67 @@
+package th.co.gosoft.audit.cpram.utils;
+
+public class DBConst {
+	
+	public static final String TABLE_Address = "address";
+	public static final String TABLE_Answer = "answer";
+	public static final String TABLE_Answer_Grade_Calculator = "answer_grade_calculator";
+	public static final String TABLE_Answer_Question_Type_Mapping = "answer_question_type_mapping";
+	public static final String TABLE_Appoint = "appoint";
+	public static final String TABLE_Appoint_Entourage = "appoint_entourage";
+	public static final String TABLE_Appoint_History = "appoint_history";
+	public static final String TABLE_Appoint_Status = "appoint_status";
+	public static final String TABLE_Appoint_Type = "appoint_type";
+	public static final String TABLE_Appoint_User_Mapping = "appoint_user_mapping";
+	public static final String TABLE_Assign_Plan = "assign_plan";
+	public static final String TABLE_Assign_Plan_Status = "assign_plan_status";
+	public static final String TABLE_Audit_Result = "audit_result";
+	public static final String TABLE_Car = "car";
+	public static final String TABLE_Car_Deatil = "car_detail";
+	public static final String TABLE_Car_Status = "car_status";
+	public static final String TABLE_CheckList = "checklist";
+	public static final String TABLE_Checklist_Plan = "checklist_plan";
+	public static final String TABLE_Checklist_Plan_Entourage = "checklist_plan_entourage";
+	public static final String TABLE_Checklist_Plan_Status = "checklist_plan_status";
+	public static final String TABLE_Checklist_Type = "checklist_type";
+	public static final String TABLE_District = "district";
+	public static final String TABLE_Eval_Form = "eval_form";
+	public static final String TABLE_Eval_Plan = "eval_plan";
+	public static final String TABLE_Eval_Plan_Answer = "eval_plan_answer";
+	public static final String TABLE_Eval_Type = "eval_type";
+	public static final String TABLE_Evidence = "evidence";
+	public static final String TABLE_Evidence_Type = "evidence_type";
+	public static final String TABLE_Final_Audit_Result = "final_audit_result";
+	public static final String TABLE_Final_Audit_Result_Status = "final_audit_result_status";
+	public static final String TABLE_Grade = "grade";
+	public static final String TABLE_Grade_Checklist_Type_Mapping = "grade_checklist_type_mapping";
+	public static final String TABLE_Information = "information";
+	public static final String TABLE_Information_Detail = "information_detail";
+	public static final String TABLE_Information_Document = "information_document";
+	public static final String TABLE_Manual_Document = "manual_document";
+	public static final String TABLE_Menu = "menu";
+	public static final String TABLE_Po_Status = "po_status";
+	public static final String TABLE_Product_Type = "product_type";
+	public static final String TABLE_Province = "province";
+	public static final String TABLE_Question_Answer_Mapping = "question_answer_mapping";
+	public static final String TABLE_Question_Type = "question_type";
+	public static final String TABLE_Question_Type_Checklist_Type_Mapping = "question_type_checklist_type_mapping";
+	public static final String TABLE_Questionaire_Document = "questionaire_document";
+	public static final String TABLE_Questionaire_Document_Type = "questionaire_document_type";
+	public static final String TABLE_Region = "region";
+	public static final String TABLE_Standard_Document = "standard_document";
+	public static final String TABLE_Sub_District = "sub_district";
+	public static final String TABLE_Supplier = "supplier";
+	public static final String TABLE_Supplier_Address_Mapping = "supplier_address_mapping";
+	public static final String TABLE_Supplier_Product_Address_Mapping = "supplier_product_address_mapping";
+	public static final String TABLE_Supplier_Product_Type_Mapping = "supplier_product_type_mapping";
+	public static final String TABLE_Supplier_Questionaire_Document = "supplier_questionaire_document";
+	public static final String TABLE_Supplier_Standard_Document = "supplier_standard_document";
+	public static final String TABLE_Supplier_User_Mapping = "supplier_user_mapping";
+	public static final String TABLE_System_Configuration = "system_configuration";
+	public static final String TABLE_System_Log = "system_log";
+	public static final String TABLE_System_Sequence = "system_sequence";
+	public static final String TABLE_User = "user";
+	public static final String TABLE_User_Group = "user_group";	
+	public static final String TABLE_User_Group_Menu_Mapping = "user_group_menu_mapping";
+	
+}

@@ -1,0 +1,28 @@
+package th.co.gosoft.audit.cpram.api;
+
+import java.util.ArrayList;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.ws.rs.POST;
+import javax.ws.rs.Path;
+import javax.ws.rs.core.Context;
+
+import org.apache.log4j.Logger;
+
+import th.co.gosoft.audit.cpram.controller.SmartPOController;
+import th.co.gosoft.audit.cpram.controller.VisualStockController;
+import th.co.gosoft.audit.cpram.utils.ExceptionUtils;
+
+@Path("/visual_stock")
+public class VisualStockAPI {
+
+	private final static Logger logger = Logger.getLogger(SmartPOAPI.class);
+	private VisualStockController visualStockController = new VisualStockController();
+	
+	@Context private HttpServletRequest servletRequest;
+	@Context private HttpServletResponse servletResponse;
+	
+	
+	
+}

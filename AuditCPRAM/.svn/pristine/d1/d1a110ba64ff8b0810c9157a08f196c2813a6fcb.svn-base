@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<decorators>
+    <decorator name="hq" page="/template.jsp">
+    
+         <pattern>/home.jsp</pattern>
+         <pattern>/users.jsp</pattern>
+         
+         <pattern>/profile.jsp</pattern>        
+         <pattern>/appoint.jsp</pattern>
+         <pattern>/appoint_form.jsp</pattern>
+         <pattern>/appoint_doc.jsp</pattern>
+         <pattern>/appoint_calendar.jsp</pattern>
+         <pattern>/supplier.jsp</pattern>
+         <pattern>/supplier_form.jsp</pattern>
+         <pattern>/product.jsp</pattern>
+         <pattern>/product_form.jsp</pattern>
+         <pattern>/question_group.jsp</pattern>
+         <pattern>/template_checklist.jsp</pattern>
+         <pattern>/template_checklist_form.jsp</pattern>
+         <pattern>/questionaire_upload.jsp</pattern>
+         <pattern>/questionaire_infomation.jsp</pattern>         
+         <pattern>/checklist.jsp</pattern>
+         <pattern>/checklist_form.jsp</pattern>
+         <pattern>/checklist_plan.jsp</pattern>
+         <pattern>/checklist_plan_form.jsp</pattern>
+         <pattern>/car.jsp</pattern>
+         <pattern>/car_form.jsp</pattern>
+         <pattern>/Test.jsp</pattern>   
+         <pattern>/testpage.jsp</pattern>   
+         
+         <pattern>/final_auditresult.jsp</pattern>
+         <pattern>/final_auditresult_form.jsp</pattern>     
+                  
+         <pattern>/report_checklist_supplier.jsp</pattern>
+         <pattern>/report_checklist_summary.jsp</pattern>
+         <pattern>/report_car_by_supplier.jsp</pattern>
+         <pattern>/report_car_summary.jsp</pattern>
+    
+         <pattern>/supplier_profile.jsp</pattern>
+         <pattern>/supplier_product.jsp</pattern>
+         <pattern>/supplier_appoint.jsp</pattern>
+         <pattern>/supplier_appoint_form.jsp</pattern>
+         <pattern>/supplier_appoint_calendar.jsp</pattern>
+         <pattern>/supplier_standard_document.jsp</pattern>
+         
+         <pattern>/setting.jsp</pattern>
+         <pattern>/setting_system.jsp</pattern>
+         <pattern>/setting_email.jsp</pattern>
+         <pattern>/setting_ldap.jsp</pattern>
+         <pattern>/document.jsp</pattern>
+         <pattern>/manual_document.jsp</pattern>
+         <pattern>/manual_document_supplier.jsp</pattern>
+         <pattern>/information.jsp</pattern>
+         <pattern>/information_form.jsp</pattern>
+         <pattern>/information_supplier.jsp</pattern>
+         
+         <pattern>/smart_po.jsp</pattern>
+         <pattern>/smart_po_detail.jsp</pattern>
+         <pattern>/smart_po_import.jsp</pattern>
+    </decorator>
+
+</decorators>

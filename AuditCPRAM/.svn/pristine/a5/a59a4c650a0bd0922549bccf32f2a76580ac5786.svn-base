@@ -1,0 +1,206 @@
+$(function() {
+	chSession();	
+	$('.form-input-datetime').datetimepicker({
+		format: 'DD/MM/YYYY HH:mm',
+		widgetPositioning: {
+       		horizontal: "auto",
+			vertical: "bottom"
+		}
+	});
+	
+	loadDataTable();
+});
+
+function chSession() {
+	let url = contextPath + "/api/user/get_permission_menu";
+	$.ajax({
+		url: url,
+		type: 'POST',
+		contentType: "application/json",
+		data: "smart_po.jsp",
+		success: function(data) {
+			if (!data.result) {
+				window.location = "/auditsupplier/home.jsp";
+			}
+		}
+	});
+}
+var data = [
+    {
+      "PoNo": "40413",
+      "ItemNo": "20",
+      "MaterialNo": "60001",
+      "Description": "Tokyo A" ,
+      "Plant": "0410",
+      "Total Stock": "",
+      "Unit": "PC",
+      "Reservation/Requirement9": "$2,700",
+      "Rounding9": "$62,700",
+      "SupplierConfirm9": "$16,700",
+      "note9": "",
+      "purResponse9": "",
+      "Reservation/Requirement13": "$162,700",
+      "Rounding13": "$700",
+      "SupplierConfirm13": "$200",
+      "note13": "",
+      "purResponse13": "",
+      "Reservation/Requirement21": "",
+      "Rounding21": "$162,700",
+      "SupplierConfirm21": "$162,700",
+      "note21": "",
+      "purResponse21": "",
+      "Total" : "122000",
+      "HistoryConfirm" : "history",
+    },
+    {
+      "PoNo": "40312",
+      "ItemNo": "30",
+      "MaterialNo": "60000",
+      "Description": "Tokyo B",
+      "Plant": "0412",
+      "Total Stock": "",
+      "Unit": "PC",
+      "Reservation/Requirement9": "",
+      "Rounding9": "",
+      "SupplierConfirm9": "",
+      "note9": "",
+      "purResponse9": "",
+      "Reservation/Requirement13": "",
+      "Rounding13": "",
+      "SupplierConfirm13": "",
+      "note13": "",
+      "purResponse13": "",
+      "Reservation/Requirement21": "",
+      "Rounding21": "",
+      "SupplierConfirm21": "",
+      "note21": "",
+      "purResponse21": "",
+      "Total" : "0",
+      "HistoryConfirm" : "history",
+    },
+    {
+      "PoNo": "20444",
+      "ItemNo": "40",
+      "MaterialNo": "60003",
+      "Description": "Tokyo C",
+      "Plant": "0413",
+      "Total Stock": "",
+      "Unit": "PC",
+      "Reservation/Requirement9": "",
+      "Rounding9": "",
+      "SupplierConfirm9": "",
+      "note9": "",
+      "purResponse9": "",
+      "Reservation/Requirement13": "",
+      "Rounding13": "",
+      "SupplierConfirm13": "$200",
+      "note13": "",
+      "purResponse13": "",
+      "Reservation/Requirement21": "",
+      "Rounding21": "",
+      "SupplierConfirm21": "",
+      "note21": "",
+      "purResponse21": "",
+      "Total" : "200",
+      "HistoryConfirm" : "history",
+    }
+];
+var collapsedGroups = {};
+    
+function loadDataTable() {
+	$('#visual_stock_table').DataTable({
+    data: data,
+    columns: [
+	    	{ "data": "PoNo",                               name: "Po No."},
+	    	{ "data": "ItemNo",                             name: "ItemNo"},            
+	    	{ "data": "MaterialNo", 					    name: "MaterialNo" },
+	    	{ "data": "Description", 				        name: "Description" },
+	    	{ "data": "Plant",				                name: "Plant" },
+	    	{ "data": "Total Stock", 			            name: "Total Stock" },
+	    	{ "data": "Unit", 			                    name: "Unit" },
+	    	{ "data": "Reservation/Requirement9", 			name: "Reservation/Requirement9" },
+	    	{ "data": "Rounding9", 				            name: "Rounding9" },
+	    	{ "data": "SupplierConfirm9",			        name: "SupplierConfirm9" },
+	    	{ "data": "note9",                              name: "note9"},    
+	    	{ "data": "purResponse9", 					    name: "purResponse9" },
+	    	{ "data": "Reservation/Requirement13", 			name: "Reservation/Requirement13" },
+	    	{ "data": "Rounding13", 				        name: "Rounding13" },
+	    	{ "data": "SupplierConfirm13",			        name: "SupplierConfirm13" },
+	    	{ "data": "note13",                             name: "note13"},    
+	    	{ "data": "purResponse13", 					    name: "purResponse13" },
+	    	{ "data": "Reservation/Requirement21", 			name: "Reservation/Requirement21" },
+	    	{ "data": "Rounding21", 				        name: "Rounding21" },
+	    	{ "data": "SupplierConfirm21",			        name: "SupplierConfirm21" },
+	    	{ "data": "note21",                             name: "note21"},    
+	    	{ "data": "purResponse21", 					    name: "purResponse21" },
+	    	{ "data": "Total", 					            name: "Total" },
+	    	{ "data": "HistoryConfirm", 					name: "HistoryConfirm" },
+	    ],
+    columnDefs: [
+        ],
+	    "order": [],
+	    "initComplete": function() {
+	    	$('.dataTables_filter').remove();
+	    }
+    
+
+  });
+}
+
+
+$('#btn_search').on('click', function() {
+	search();
+});
+
+
+
+$("#supplier_input").keyup(function(event) {
+    if (event.keyCode === 13) {
+        search();
+    }
+});
+$("#meterial_input").keyup(function(event) {
+    if (event.keyCode === 13) {
+        search();
+    }
+});
+
+$("#plant_input").keyup(function(event) {
+    if (event.keyCode === 13) {
+        search();
+    }
+});
+
+
+$('#btn_clear').on('click', function() {
+	clearSearch();
+});
+
+$('#btn_export').on('click', function() {
+	exportExcel();
+});
+
+function search() {
+	console.log("aaaa")
+	$('#visual_stock_table').DataTable().columns(1).search($('#supplier_input').val().trim());
+	$('#visual_stock_table').DataTable().columns(2).search($('#meterial_input').val().trim());
+	$('#visual_stock_table').DataTable().columns(4).search($('#plant_input').val().trim());
+	$('#visual_stock_table').DataTable().columns(5).search($('#status_confirm').val().trim());
+	$('#visual_stock_table').DataTable().draw();
+	
+}
+
+function clearSearch() {
+	$('#supplier_input').val('');
+	$('#meterial_input').val('');
+	$('#plant_input').val('');
+	$('#status_confirm').val('');
+}
+
+function exportExcel() {
+	$('#export_supplier').val($('#supplier_input').val().trim());
+	$('#export_meterial').val($('#meterial_input').val().trim());
+	$('#export_plant').val($('#plant_input').val().trim());
+	$('#export_status').val($('#status_confirm').val().trim());
+	$("#export_form").submit();
+}

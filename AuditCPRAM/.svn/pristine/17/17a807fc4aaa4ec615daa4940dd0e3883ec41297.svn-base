@@ -1,0 +1,32 @@
+package th.co.gosoft.audit.cpram.controller;
+
+import java.sql.Connection;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.servlet.ServletOutputStream;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.commons.lang.StringUtils;
+import org.apache.log4j.Logger;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+import th.co.gosoft.audit.cpram.dao.SmartPODAO;
+import th.co.gosoft.audit.cpram.dto.PoDTO;
+import th.co.gosoft.audit.cpram.dto.StockDTO;
+import th.co.gosoft.audit.cpram.model.PoModel;
+import th.co.gosoft.audit.cpram.model.UserModel;
+import th.co.gosoft.audit.cpram.utils.DatabaseUtils;
+import th.co.gosoft.audit.cpram.utils.ExceptionUtils;
+import th.co.gosoft.audit.cpram.utils.SessionUtils;
+import th.co.gosoft.audit.cpram.utils.StaticVariableUtils;
+
+
+public class VisualStockController {
+	private static Logger logger = Logger.getLogger(VisualStockController.class);
+	
+	
+}
